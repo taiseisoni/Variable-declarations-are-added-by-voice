@@ -53,7 +53,8 @@ export function activate(context: vscode.ExtensionContext) {
 		//vscode.window.showInformationMessage('カーソル位置を保存しました。Pythonで処理を行います。');
 
 		//コード解析Pythonスクリプトを実行
-		exec(`python ../../../../vscode-omikuji/dist/pythoncode/test14.py`, { encoding: "utf8" }, async (error, stdout, stderr) => {
+		//ファイルパスを適切なものに変更
+		exec(`python test14.py`, { encoding: "utf8" }, async (error, stdout, stderr) => {
 			if (error) {
 				console.error(`Pythonスクリプト実行エラー: ${error}`);
 				vscode.window.showInformationMessage('Pythonスクリプトの実行に失敗しました。');
@@ -104,7 +105,8 @@ export function activate(context: vscode.ExtensionContext) {
 		let VariableName = "zzerrorzz";
 		function runPythonScript(): void {	
 			vscode.window.showInformationMessage('音声読み取りを開始。中断したい場合はキャンセルと発言。');
-			exec("python ../../../../vscode-omikuji/dist/pythoncode/test15.py", { encoding: "utf8" }, async(error, stdout, stderr) => {
+			//ファイルパスを適切なものに変更
+			exec("python test15.py", { encoding: "utf8" }, async(error, stdout, stderr) => {
 				if (error) {
 			  		console.error(`Error executing Python script: ${error}`);
 					vscode.window.showInformationMessage('cant open python file.');
@@ -113,6 +115,7 @@ export function activate(context: vscode.ExtensionContext) {
 				//vscode.window.showInformationMessage(`voice input実行結果: ${stdout}`);
 
 				try {
+					//ファイルパスを適切なものに変更
                     let inputword = fs.readFileSync('test06-output.txt', 'utf-8').trim();
 					vscode.window.showInformationMessage(`Your voice input : ${inputword}`);
 					if (inputword == "cancel"){

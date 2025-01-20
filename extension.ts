@@ -1,5 +1,4 @@
 //Pythonコードを呼び出すプログラム
-//python[test06.py]でマイク入力をするプログラム
 //開かれているCエディタに変数型と変数名を書き込む
 
 import * as vscode from 'vscode';
@@ -54,7 +53,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 		//コード解析Pythonスクリプトを実行
 		//ファイルパスを適切なものに変更
-		exec(`python test14.py`, { encoding: "utf8" }, async (error, stdout, stderr) => {
+		exec(`python Clang.py`, { encoding: "utf8" }, async (error, stdout, stderr) => {
 			if (error) {
 				console.error(`Pythonスクリプト実行エラー: ${error}`);
 				vscode.window.showInformationMessage('Pythonスクリプトの実行に失敗しました。');
@@ -106,7 +105,7 @@ export function activate(context: vscode.ExtensionContext) {
 		function runPythonScript(): void {	
 			vscode.window.showInformationMessage('音声読み取りを開始。中断したい場合はキャンセルと発言。');
 			//ファイルパスを適切なものに変更
-			exec("python test15.py", { encoding: "utf8" }, async(error, stdout, stderr) => {
+			exec("python VoiceInput.py", { encoding: "utf8" }, async(error, stdout, stderr) => {
 				if (error) {
 			  		console.error(`Error executing Python script: ${error}`);
 					vscode.window.showInformationMessage('cant open python file.');

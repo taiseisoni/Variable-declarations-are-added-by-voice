@@ -12,7 +12,7 @@ import time
 from word2number import w2n
 
 # APIキーをセット
-openai.api_key = "sk-OAQ9GemYzEXWc8bCrrB-z5GC_CRJhEuVGSLT56VXCUT3BlbkFJ7B_4jIQRoS5mvVNKlOiVW4rIJKpA6uM9XIxSHnL7UA"
+openai.api_key = "自分のAPIキーを使用"
 
 def main():
     recognizer = sr.Recognizer()

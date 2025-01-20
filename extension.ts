@@ -115,7 +115,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 				try {
 					//ファイルパスを適切なものに変更
-                    let inputword = fs.readFileSync('test06-output.txt', 'utf-8').trim();
+                    let inputword = fs.readFileSync('Voice-output.txt', 'utf-8').trim();
 					vscode.window.showInformationMessage(`Your voice input : ${inputword}`);
 					if (inputword == "cancel"){
 						vscode.window.showInformationMessage(`cancelと入力されたので終了します。`);
@@ -147,7 +147,7 @@ export function activate(context: vscode.ExtensionContext) {
 						await insertVariable(VariableType, VariableName);
 					}
                 } catch (err) {
-                    console.error(`Error reading test06-output.txt: ${err}`);
+                    console.error(`Error reading Voice-output.txt: ${err}`);
                 }
 				const voiceend = new Date().getTime();
 				console.log(`Hand input Execution Time:[${VariableType} ${VariableName}] ${voiceend - voicestart} ms`);										

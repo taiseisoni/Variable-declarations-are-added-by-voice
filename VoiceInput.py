@@ -41,14 +41,13 @@ def main():
 
     #？wavファイルを作りながらapenai.Audio.transcribeをする方法を作るのもいいかも　パイプ
     #openai.Audio.translate()はdict型
-    #result = openai.Audio.translate("whisper-1", open_audio, language = 'en')
     result = openai.Audio.transcribe("whisper-1", open_audio, language = "en")
 
     #結果をstr型でr_textに代入
     r_text = result["text"]
 
     #発声内容を書き込む
-    with open("test06-output.txt", "w",encoding='utf8') as file:
+    with open("Voice-output.txt", "w",encoding='utf8') as file:
         file.write(r_text.strip().replace(".", "").lower())
 
     r_text = r_text.replace("-"," ").replace(", ",",").replace(","," ")

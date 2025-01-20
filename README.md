@@ -1,0 +1,2 @@
+# Variable-declarations-are-added-by-voice
+C言語を対象とした音声入力により変数宣言を追加する手法の提案及び実装の卒業研究のプログラムコード

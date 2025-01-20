@@ -6,7 +6,7 @@ import os
 import clang.cindex
 import re
 
-# Clangライブラリのパスを設定
+# Clangライブラリのパスを適切なものに変更
 clang.cindex.Config.set_library_path(r"C:\Program Files\LLVM\bin")
 
 def normalize_type(type_spelling):
